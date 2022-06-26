@@ -1,0 +1,62 @@
+.portfolio-hello-container {
+  height: 100%;
+  margin: auto;
+
+  &__block-name {
+    position: relative;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-40%);
+    &__hello {
+      font-size: 18px;
+    }
+
+    &__name {
+      font-size: 62px;
+      line-height: 62px;
+    }
+
+    &__role {
+      color: #43D9AD;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+
+  &__block-code {
+    position: absolute;
+    bottom: 80px;
+    &__comment {
+      font-size: 14px;
+      line-height: 14px;
+      color: #607B96;
+    }
+
+    &__code {
+      p {
+        margin: 0;
+      }
+
+      .attribute-code {
+        color: #4D5BCE;
+      }
+
+      .variable-name {
+        padding-left: 8px;
+        color: #43D9AD;
+      }
+
+      .equals{
+        padding-left: 8px;
+        color: #FFFFFF;
+      }
+
+      .github-link{
+        padding-left: 8px;
+        color: #E99287;
+      }
+    }
+  }
+}

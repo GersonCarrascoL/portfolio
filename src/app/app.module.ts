@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './components/main/main.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/share.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
