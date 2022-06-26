@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PathPortfolio } from '@shared/enums/path.enum';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'hello',
+    redirectTo: PathPortfolio.HELLO,
     pathMatch: 'full',
   },
   {
@@ -13,22 +14,22 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: 'hello',
+        path: PathPortfolio.HELLO,
         loadChildren: () =>
           import('@modules/hello/hello.module').then((m) => m.HelloModule)
       },
       {
-        path: 'about-me',
+        path: PathPortfolio.ABOUT_ME,
         loadChildren: () =>
           import('@modules/about-me/about-me.module').then((m) => m.AboutMeModule)
       },
       {
-        path: 'contact-me',
+        path: PathPortfolio.CONTACT_ME,
         loadChildren: () =>
           import('@modules/contact-me/contact-me.module').then((m) => m.ContactMeModule)
       },
       {
-        path: 'projects',
+        path: PathPortfolio.PROJECTS,
         loadChildren: () =>
           import('@modules/projects/projects.module').then((m) => m.ProjectsModule)
       }

@@ -1,10 +1,12 @@
 <mat-drawer-container class="h-100"
-                      [hasBackdrop]="true">
-  <mat-drawer #drawer
-              [mode]="'over'">I'm a drawer</mat-drawer>
+                      [hasBackdrop]="false">
   <mat-drawer-content>
     <section class="section-base-portfolio">
       <div class="portfolio-base">
+        <mat-drawer #drawer
+                    [mode]="'over'">
+          <portfolio-drawer (closeNav)="drawer.toggle()"></portfolio-drawer>
+        </mat-drawer>
         <portfolio-navbar (openNav)="drawer.toggle()"></portfolio-navbar>
         <div class="portfolio-container">
           <router-outlet></router-outlet>

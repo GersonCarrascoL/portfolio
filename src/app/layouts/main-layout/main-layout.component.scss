@@ -7,11 +7,20 @@
     position: relative;
     height: 100%;
     border: 1px solid #1E2D3D;
-    border-radius:8px
+    border-radius:8px;
   }
 
   .portfolio-container {
+    background-color: #011627;
+    border-radius:8px;
     height: 100%;
     padding: 75px 20px 20px 20px;
   }
+}
+
+.mat-drawer {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #1E2D3D;
+  background-color: #011627;
 }
