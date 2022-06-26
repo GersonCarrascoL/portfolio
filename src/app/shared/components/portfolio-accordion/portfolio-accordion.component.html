@@ -1,0 +1,38 @@
+<section class="portfolio-accordion">
+  <div *ngFor="let item of items;index as i"
+       class="portfolio-accordion__item"
+       [class.disabled]="item.disabled"
+       [class.active]="expanded.has(i)">
+    <ng-container [ngTemplateOutlet]="(item?.customHeader?.templateRef || defaultHeader)"
+                  [ngTemplateOutletContext]="{$implicit: item, index: i, toggle: getToggleState(i)}"></ng-container>
+    <div class="portfolio-accordion__content"
+         [class.expanded]="expanded.has(i)"
+         [@contentExpansion]="expanded.has(i) ? 'expanded':'collapsed'">
+      <ng-container *ngTemplateOutlet="item.content.templateRef"></ng-container>
+    </div>
+  </div>
+</section>
+
+<ng-template #defaultHeader
+             let-item
+             let-index="index">
+  <header class="portfolio-accordion__header"
+          (click)="item.disabled ? {} :toggleState(index)">
+    <button class="portfolio-accordion__toggle-btn"
+            [disabled]="item.disabled">
+      <svg width="7"
+           height="9"
+           viewBox="0 0 7 9"
+           fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.75 4.37245L0.75 8.62247L0.75 0.122436L6.75 4.37245Z"
+              fill="white" />
+      </svg>
+
+    </button>
+    <ng-container *ngTemplateOutlet="item?.customTitle?.templateRef || defaultTitle"></ng-container>
+  </header>
+  <ng-template #defaultTitle>
+    <p class="portfolio-accordion__title">{{item?.title}}</p>
+  </ng-template>
+</ng-template>

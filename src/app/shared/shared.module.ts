@@ -5,24 +5,37 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PortfolioAccordionModule } from './components/portfolio-accordion/portfolio-accordion.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PortfolioDirectoryItemComponent } from './components/portfolio-directory-item/portfolio-directory-item.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    DrawerComponent
+    DrawerComponent,
+    PortfolioDirectoryItemComponent
   ],
   imports: [
     MaterialModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+
+    PortfolioAccordionModule
   ],
   exports: [
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     NavbarComponent,
     DrawerComponent,
-    FontAwesomeModule
+    PortfolioDirectoryItemComponent,
+
+    FontAwesomeModule,
+    PortfolioAccordionModule
   ],
   providers: [],
 })
