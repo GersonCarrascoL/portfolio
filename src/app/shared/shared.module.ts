@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -13,13 +14,15 @@ import { RouterModule } from '@angular/router';
   imports: [
     MaterialModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     MaterialModule,
 
     NavbarComponent,
-    DrawerComponent
+    DrawerComponent,
+    FontAwesomeModule
   ],
   providers: [],
 })
