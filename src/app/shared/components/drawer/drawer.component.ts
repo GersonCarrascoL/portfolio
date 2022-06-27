@@ -24,18 +24,4 @@ export class DrawerComponent implements OnInit {
   onClose() {
     this.closeNav.emit();
   }
-
-  onClickSocialMedia( socialMedia: string) {
-    switch (socialMedia) {
-      case 'facebook':
-        window.open(SocialMedia.facebook, "_blank");
-        break;
-      case 'github':
-        window.open(SocialMedia.github, "_blank");
-        break;
-      case 'linkedin':
-        window.open(SocialMedia.linkedIn, "_blank");
-        break;
-    }
-  }
 }

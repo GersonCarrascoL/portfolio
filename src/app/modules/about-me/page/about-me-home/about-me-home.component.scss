@@ -1,5 +1,31 @@
 .portfolio-about-me-container {
-  // &__title {
-  //   text-align: center;
+  padding-bottom: 40px !important;
+
+  // &__info {
+  //   .info-title {
+  //     .info-directory {
+  //       color: #FFFFFF;
+  //     }
+  //     .info-subdirectory {
+  //       color: #607B96;
+  //     }
+  //   }
+
+  //   .info-description {
+  //     color: #607B96;
+  //   }
   // }
+}
+
+.drawer-find-me {
+  border-top: 1px solid #1E2D3D;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &__social-media {
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    padding: 8px 0 0 0;
+  }
 }

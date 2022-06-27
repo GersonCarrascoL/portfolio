@@ -8,12 +8,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PortfolioAccordionModule } from './components/portfolio-accordion/portfolio-accordion.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioDirectoryItemComponent } from './components/portfolio-directory-item/portfolio-directory-item.component';
+import { FindMeInComponent } from './components/find-me-in/find-me-in.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     DrawerComponent,
-    PortfolioDirectoryItemComponent
+    PortfolioDirectoryItemComponent,
+    FindMeInComponent
   ],
   imports: [
     MaterialModule,
@@ -33,6 +35,7 @@ import { PortfolioDirectoryItemComponent } from './components/portfolio-director
     NavbarComponent,
     DrawerComponent,
     PortfolioDirectoryItemComponent,
+    FindMeInComponent,
 
     FontAwesomeModule,
     PortfolioAccordionModule

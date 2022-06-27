@@ -7,14 +7,14 @@ import { PortfolioDirectoryItemsPersonalInfo } from '@shared/constants/portfolio
   styleUrls: ['./about-me-home.component.scss']
 })
 export class AboutMeHomeComponent implements OnInit {
-  collapsing = true;
-
-  personalInfoDirectoryItems = PortfolioDirectoryItemsPersonalInfo;
+  public collapsing = true;
+  public personalInfoDirectoryItems = PortfolioDirectoryItemsPersonalInfo;
+  public type: string = 'bio';
   constructor() { }
 
   ngOnInit(): void { }
 
   onClickItemPersonalInfo(event: any) {
-    console.log(event)
+    this.type = event.text;
   }
 }
