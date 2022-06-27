@@ -1,1 +1,29 @@
-hola projects
+<div class="portfolio-container-full portfolio-projects-container">
+  <div class="portfolio-projects-container__title pb-4 px-4">
+    _projects
+  </div>
+
+  <portfolio-accordion [collapsing]="collapsing">
+    <accordion-item title="projects">
+      <ng-template accordionContent>
+        <div class="px-4 py-2">
+          <filter-project (changeFilter)="onChangeFilter($event)"></filter-project>
+        </div>
+      </ng-template>
+    </accordion-item>
+  </portfolio-accordion>
+
+  <div class="portfolio-projects-container__info px-4 pt-4">
+    <div class="info-title">
+      <span class="info-directory">// projects </span><span class="info-subdirectory">/ all</span>
+    </div>
+
+    <div class="list-projects pt-4">
+      <ng-container *ngFor="let item of projectsList">
+        <project-card [project]="item"></project-card>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<find-me-in></find-me-in>

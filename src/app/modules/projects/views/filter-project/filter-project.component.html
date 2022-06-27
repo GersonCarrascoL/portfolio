@@ -1,0 +1,47 @@
+<form [formGroup]="projectForm">
+  <div class="row">
+    <div class="col-12">
+      <mat-checkbox class="example-margin"
+                    formControlName="angular"
+                    (change)="onChangeFilter()">
+        <fa-icon [icon]="faAngular"></fa-icon> Angular
+      </mat-checkbox>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-checkbox class="example-margin"
+                    formControlName="android"
+                    (change)="onChangeFilter()">
+        <fa-icon [icon]="faAndroid"></fa-icon> Android
+      </mat-checkbox>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-checkbox class="example-margin"
+                    formControlName="php"
+                    (change)="onChangeFilter()">
+        <fa-icon [icon]="faPhp"></fa-icon> PHP
+      </mat-checkbox>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-checkbox class="example-margin"
+                    formControlName="nodejs"
+                    (change)="onChangeFilter()">
+        <fa-icon [icon]="faNode"></fa-icon> NodeJS
+      </mat-checkbox>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <mat-checkbox class="example-margin"
+                    formControlName="flutter"
+                    (change)="onChangeFilter()">
+        <fa-icon [icon]="faMobile"></fa-icon> Flutter
+      </mat-checkbox>
+    </div>
+  </div>
+</form>

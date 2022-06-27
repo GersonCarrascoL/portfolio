@@ -1,0 +1,14 @@
+.portfolio-projects-container {
+  padding-bottom: 40px !important;
+
+  &__info {
+    .info-title {
+      .info-directory {
+        color: #FFFFFF;
+      }
+      .info-subdirectory {
+        color: #607B96;
+      }
+    }
+  }
+}
