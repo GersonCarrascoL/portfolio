@@ -2,7 +2,18 @@
   padding-bottom: 40px !important;
 
   &__info {
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    background-color: #010c15;
     .info-title {
+      position: sticky;
+      top: 0px;
+      width: 100%;
+      background-color: #010c15;
+      z-index: 2;
+      padding: 20px 0 20px 0;
       .info-directory {
         color: #FFFFFF;
       }
