@@ -1,1 +1,41 @@
-hola contact me
+<div class="portfolio-container-full portfolio-contact-me-container">
+  <div class="portfolio-contact-me-container__title pb-4 px-4">
+    _contact-me
+  </div>
+  <portfolio-accordion [collapsing]="collapsing">
+
+    <accordion-item title="contacts">
+      <ng-template accordionContent>
+        <div class="px-4 py-2">
+          A simple and customizable accordion component made with
+          functionalities provided by angular without having to use any 3rd
+          party libraries. Ideal when you want custom basic accordion.
+        </div>
+      </ng-template>
+    </accordion-item>
+
+    <accordion-item title="find-me-also-in">
+      <ng-template accordionContent>
+        <div class="px-4 py-2">
+          <ng-container *ngFor="let item of personalLinksFindMe">
+            <portfolio-links-find-me [text]="item.text"
+                                     [link]="item.link"></portfolio-links-find-me>
+          </ng-container>
+
+        </div>
+      </ng-template>
+    </accordion-item>
+  </portfolio-accordion>
+
+  <div class="portfolio-contact-me-container__info px-4">
+    <ng-container *ngIf="!messageSend">
+      <contact-me-form [form]="contactForm"
+                       (onSubmit)="onSubmitForm($event)"></contact-me-form>
+    </ng-container>
+    <ng-container *ngIf="messageSend">
+      <contact-me-success (resendNewMessage)="onResendMessage()"></contact-me-success>
+    </ng-container>
+  </div>
+</div>
+
+<find-me-in></find-me-in>

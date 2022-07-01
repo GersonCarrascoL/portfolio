@@ -9,13 +9,15 @@ import { PortfolioAccordionModule } from './components/portfolio-accordion/portf
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioDirectoryItemComponent } from './components/portfolio-directory-item/portfolio-directory-item.component';
 import { FindMeInComponent } from './components/find-me-in/find-me-in.component';
+import { PortfolioLinksFindMeComponent } from './components/portfolio-links-find-me/portfolio-links-find-me.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     DrawerComponent,
     PortfolioDirectoryItemComponent,
-    FindMeInComponent
+    FindMeInComponent,
+    PortfolioLinksFindMeComponent
   ],
   imports: [
     MaterialModule,
@@ -36,6 +38,7 @@ import { FindMeInComponent } from './components/find-me-in/find-me-in.component'
     DrawerComponent,
     PortfolioDirectoryItemComponent,
     FindMeInComponent,
+    PortfolioLinksFindMeComponent,
 
     FontAwesomeModule,
     PortfolioAccordionModule
