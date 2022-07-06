@@ -1,0 +1,33 @@
+.portfolio-about-me-container {
+  padding-bottom: 40px !important;
+
+  &__info {
+    max-height: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #010c15;
+  }
+
+  &__sidebar-desktop {
+    border-right: 1px solid #1E2D3D;
+  }
+
+  &__icon-list-desktop {
+    border-right: 1px solid #1E2D3D;
+  }
+}
+
+.drawer-find-me {
+  border-top: 1px solid #1E2D3D;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &__social-media {
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    padding: 8px 0 0 0;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="project-card__container">
+  <div class="project-card__image">
+    <div class="tag">
+      <ng-container [ngSwitch]="project.tag">
+        <ng-container *ngSwitchCase="'angular'">
+          <fa-icon [icon]="faAngular"></fa-icon>
+        </ng-container>
+        <ng-container *ngSwitchCase="'android'">
+          <fa-icon [icon]="faAndroid"></fa-icon>
+        </ng-container>
+        <ng-container *ngSwitchCase="'php'">
+          <fa-icon [icon]="faPhp"></fa-icon>
+        </ng-container>
+        <ng-container *ngSwitchCase="'nodejs'">
+          <fa-icon [icon]="faNode"></fa-icon>
+        </ng-container>
+        <ng-container *ngSwitchCase="'flutter'">
+          <fa-icon [icon]="faMobile"></fa-icon>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+  <div class="project-card__description">
+    aadasd12312asdasd asd asdad asd123123 123
+  </div>
+</div>

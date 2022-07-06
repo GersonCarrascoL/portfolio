@@ -1,0 +1,27 @@
+.drawer-find-me {
+  color: #607B96;
+  border-top: 1px solid #1E2D3D;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  &__social-media {
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    padding: 8px 0 0 0;
+  }
+
+  &__social-media-desktop {
+    display: inline-block;
+    border-left: 1px solid #1E2D3D;
+    padding: 9px 16px 9px 16px;
+  }
+
+  &__social-media-desktop-user {
+    display: inline-block;
+    border-left: 1px solid #1E2D3D;
+    padding: 9px 16px 9px 16px;
+    position: absolute;
+    right: 0;
+  }
+}

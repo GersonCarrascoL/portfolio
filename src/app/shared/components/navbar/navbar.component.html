@@ -1,0 +1,38 @@
+<div class="navbar-container row m-0">
+  <div class="col col-md-3 navbar-item-name">
+    gerson-carrasco
+  </div>
+  <div class="col-md-6 d-none d-md-block">
+    <div class="row">
+      <div class="navbar-item cursor"
+           [routerLink]="['/hello']"
+           routerLinkActive="router-link-active-navbar">
+        _hello
+      </div>
+      <div class="navbar-item cursor"
+           [routerLink]="['/about-me']"
+           routerLinkActive="router-link-active-navbar">
+        _about-me
+      </div>
+      <div class="navbar-item cursor"
+           [routerLink]="['/projects']"
+           routerLinkActive="router-link-active-navbar">
+        _projects
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 p-0  d-none d-md-block">
+    <div class="row m-0 justify-content-end">
+      <div class="navbar-item cursor"
+           [routerLink]="['/contact-me']"
+           routerLinkActive="router-link-active-navbar">
+        _contact-me
+      </div>
+    </div>
+  </div>
+
+  <div class="col-2 col-sm-1 text-right d-md-none navbar-item-icon">
+    <mat-icon color="accent"
+              (click)="onOpen()">menu</mat-icon>
+  </div>
+</div>

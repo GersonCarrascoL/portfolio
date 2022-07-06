@@ -1,0 +1,75 @@
+:host {
+  --accordion-header-height: 50px;
+  --accordion-header-bg: #1E2D3D;
+  --accordion-disabled: hsl(0, 0%, 60%);
+  --accordion-border-radius: 8px;
+  width: 100%;
+}
+
+.portfolio-accordion {
+
+  &__item {
+    &:first-child {
+      .accordion__header {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+    &:last-child {
+      .accordion__header {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+    .accordion__header {
+      &:focus-within {
+        border-color: red;
+        border-radius: 8px;
+      }
+    }
+
+    &.disabled {
+      .portfolio-accordion__header {
+        color: var(--accordion-disabled);
+        cursor: not-allowed;
+      }
+    }
+
+    &.active {
+      .portfolio-accordion__toggle-btn {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  &__header {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    border: 2px solid transparent;
+    height: var(--accordion-header-height);
+    cursor: pointer;
+    background: var(--accordion-header-bg);
+  }
+
+  &__toggle-btn {
+    border: none;
+    transition: transform 0.3s ease-in;
+    background: none;
+
+    &:disabled {
+      cursor: not-allowed;
+
+      svg path:nth-child(2) {
+        fill: var(--accordion-disabled);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

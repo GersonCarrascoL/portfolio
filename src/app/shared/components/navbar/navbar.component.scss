@@ -1,0 +1,26 @@
+.navbar-container {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #1E2D3D;
+
+  .navbar-item-name {
+    border-right: 1px solid #1E2D3D;
+    padding: 15px !important;
+  }
+  .navbar-item {
+    border-right: 1px solid #1E2D3D;
+    padding: 15px;
+    color: #607B96;
+    &:last-of-type {
+      border-left: 1px solid #1E2D3D;
+    }
+  }
+  .navbar-item-icon {
+    padding: 12px;
+  }
+
+  .router-link-active-navbar {
+    border-bottom: 1px solid #FEA55F;
+    color: white;
+  }
+}

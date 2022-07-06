@@ -1,0 +1,22 @@
+.info-title {
+  position: sticky;
+  top: 0;
+  background-color: #010C15;
+  padding: 10px 0 10px 0;
+  .info-directory {
+    color: #FFFFFF;
+  }
+  .info-subdirectory {
+    color: #607B96;
+  }
+}
+
+.info-description {
+  color: #607B96;
+}
+
+@media (min-width: 767px) {
+  .info-title {
+    background-color: unset;
+  }
+}

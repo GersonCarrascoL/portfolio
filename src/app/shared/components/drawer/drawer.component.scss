@@ -1,0 +1,17 @@
+.drawer-navbar {
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #1E2D3D;
+}
+
+.drawer-list-item {
+  padding-top: 55px;
+
+  .drawer-item {
+    border-bottom: 1px solid #1E2D3D;
+  }
+}
+
+.router-link-active {
+  background-color: #1E2D3D;
+}

@@ -1,0 +1,16 @@
+<mat-drawer-container class="h-100"
+                      [hasBackdrop]="false">
+  <mat-drawer-content class="m-0">
+    <section class="section-base-portfolio">
+      <div class="portfolio-base">
+        <mat-drawer #drawer
+                    [mode]="mode"
+                    position="start">
+          <portfolio-drawer (closeNav)="drawer.toggle()"></portfolio-drawer>
+        </mat-drawer>
+        <portfolio-navbar (openNav)="drawer.toggle()"></portfolio-navbar>
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </mat-drawer-content>
+</mat-drawer-container>

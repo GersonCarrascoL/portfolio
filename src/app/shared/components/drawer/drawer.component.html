@@ -1,0 +1,21 @@
+<div class="drawer-navbar row px-2 pt-3 pb-2 m-0">
+  <div class="col">
+    gerson-carrasco
+  </div>
+  <div class="col-2 text-right">
+    <mat-icon color="accent"
+              (click)="onClose()">close</mat-icon>
+  </div>
+</div>
+<div class="drawer-list-item">
+  <ng-container *ngFor="let path of routerPaths">
+    <div class="drawer-item row m-0 pl-3 py-2"
+         [routerLink]="[path.url]"
+         routerLinkActive="router-link-active"
+         (click)="onClose()">
+      {{ path.name }}
+    </div>
+  </ng-container>
+</div>
+
+<find-me-in></find-me-in>
