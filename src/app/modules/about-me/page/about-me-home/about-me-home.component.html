@@ -1,54 +1,124 @@
 <div class="portfolio-container-full portfolio-about-me-container">
-  <div class="portfolio-about-me-container__title pb-4 px-4">
-    _about-me
+  <div class="h-100 d-none d-md-block">
+    <div class="row h-100 m-0">
+      <div class="portfolio-about-me-container__sidebar-desktop col-md-3 p-0">
+        <div class="row m-0 h-100">
+          <div class="portfolio-about-me-container__icon-list-desktop col-2 p-0 h-100">
+            <portfolio-icon-side-bar></portfolio-icon-side-bar>
+          </div>
+          <div class="col-10 p-0">
+            <portfolio-accordion [collapsing]="collapsing">
+              <accordion-item title="personal-info">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    <ng-container *ngFor="let item of personalInfoDirectoryItems">
+                      <portfolio-directory-item [text]="item.text"
+                                                [icon]="item.icon"
+                                                [color]="item.color"
+                                                (onClickItem)="onClickItemPersonalInfo($event)"></portfolio-directory-item>
+                    </ng-container>
+                  </div>
+                </ng-template>
+              </accordion-item>
+
+              <accordion-item title="professional-info">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    A simple and customizable accordion component made with
+                    functionalities provided by angular without having to use any 3rd
+                    party libraries. Ideal when you want custom basic accordion.
+                  </div>
+                </ng-template>
+              </accordion-item>
+
+              <accordion-item title="hobbies">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    A simple and customizable accordion component made with
+                    functionalities provided by angular without having to use any 3rd
+                    party libraries. Ideal when you want custom basic accordion.
+                  </div>
+                </ng-template>
+              </accordion-item>
+
+              <accordion-item title="contacts">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    A simple and customizable accordion component made with
+                    functionalities provided by angular without having to use any 3rd
+                    party libraries. Ideal when you want custom basic accordion.
+                  </div>
+                </ng-template>
+              </accordion-item>
+            </portfolio-accordion>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <portfolio-title-view [title]="type"></portfolio-title-view>
+        <div class="row h-100">
+          <div class="col-6 h-100">
+            <about-me-info [type]="type"></about-me-info>
+          </div>
+          <div class="col-6 h-100">
+            <about-me-info [type]="type"></about-me-info>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <portfolio-accordion [collapsing]="collapsing">
-    <accordion-item title="personal-info">
-      <ng-template accordionContent>
-        <div class="px-4 py-2">
-          <ng-container *ngFor="let item of personalInfoDirectoryItems">
-            <portfolio-directory-item [text]="item.text"
-                                      [icon]="item.icon"
-                                      [color]="item.color"
-                                      (onClickItem)="onClickItemPersonalInfo($event)"></portfolio-directory-item>
-          </ng-container>
-        </div>
-      </ng-template>
-    </accordion-item>
+  <div class="mobile d-block d-md-none">
+    <div class="portfolio-about-me-container__title pb-4 px-4">
+      _about-me
+    </div>
+    <portfolio-accordion [collapsing]="collapsing">
+      <accordion-item title="personal-info">
+        <ng-template accordionContent>
+          <div class="px-4 py-2">
+            <ng-container *ngFor="let item of personalInfoDirectoryItems">
+              <portfolio-directory-item [text]="item.text"
+                                        [icon]="item.icon"
+                                        [color]="item.color"
+                                        (onClickItem)="onClickItemPersonalInfo($event)"></portfolio-directory-item>
+            </ng-container>
+          </div>
+        </ng-template>
+      </accordion-item>
 
-    <accordion-item title="professional-info">
-      <ng-template accordionContent>
-        <div class="px-4 py-2">
-          A simple and customizable accordion component made with
-          functionalities provided by angular without having to use any 3rd
-          party libraries. Ideal when you want custom basic accordion.
-        </div>
-      </ng-template>
-    </accordion-item>
+      <accordion-item title="professional-info">
+        <ng-template accordionContent>
+          <div class="px-4 py-2">
+            A simple and customizable accordion component made with
+            functionalities provided by angular without having to use any 3rd
+            party libraries. Ideal when you want custom basic accordion.
+          </div>
+        </ng-template>
+      </accordion-item>
 
-    <accordion-item title="hobbies">
-      <ng-template accordionContent>
-        <div class="px-4 py-2">
-          A simple and customizable accordion component made with
-          functionalities provided by angular without having to use any 3rd
-          party libraries. Ideal when you want custom basic accordion.
-        </div>
-      </ng-template>
-    </accordion-item>
+      <accordion-item title="hobbies">
+        <ng-template accordionContent>
+          <div class="px-4 py-2">
+            A simple and customizable accordion component made with
+            functionalities provided by angular without having to use any 3rd
+            party libraries. Ideal when you want custom basic accordion.
+          </div>
+        </ng-template>
+      </accordion-item>
 
-    <accordion-item title="contacts">
-      <ng-template accordionContent>
-        <div class="px-4 py-2">
-          A simple and customizable accordion component made with
-          functionalities provided by angular without having to use any 3rd
-          party libraries. Ideal when you want custom basic accordion.
-        </div>
-      </ng-template>
-    </accordion-item>
-  </portfolio-accordion>
+      <accordion-item title="contacts">
+        <ng-template accordionContent>
+          <div class="px-4 py-2">
+            A simple and customizable accordion component made with
+            functionalities provided by angular without having to use any 3rd
+            party libraries. Ideal when you want custom basic accordion.
+          </div>
+        </ng-template>
+      </accordion-item>
+    </portfolio-accordion>
 
-  <div class="portfolio-about-me-container__info px-4">
-    <about-me-info [type]="type"></about-me-info>
+    <div class="portfolio-about-me-container__info px-4">
+      <about-me-info [type]="type"></about-me-info>
+    </div>
   </div>
 </div>
 

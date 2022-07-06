@@ -9,4 +9,12 @@
     overflow: scroll;
     background-color: #011627;
   }
+
+  &__sidebar-desktop {
+    border-right: 1px solid #1E2D3D;
+  }
+
+  &__icon-list-desktop {
+    border-right: 1px solid #1E2D3D;
+  }
 }

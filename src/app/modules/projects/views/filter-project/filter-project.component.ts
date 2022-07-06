@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faAngular, faAndroid, faPhp, faNode } from '@fortawesome/free-brands-svg-icons';
 import { faMobile } from '@fortawesome/free-solid-svg-icons';
+import { IPortfolioFilterProject } from '@shared/interfaces/portfolio-project.interface';
 
 @Component({
   selector: 'filter-project',
@@ -16,7 +17,7 @@ export class FilterProjectComponent implements OnInit {
   public faNode = faNode as IconProp;
   public faMobile = faMobile as IconProp;
 
-  @Output() changeFilter: EventEmitter<void>;
+  @Output() changeFilter: EventEmitter<IPortfolioFilterProject>;
   constructor(
     private fb: FormBuilder
   ) {
@@ -35,6 +36,7 @@ export class FilterProjectComponent implements OnInit {
       nodejs: false,
       flutter: false
     })
+    this.changeFilter.emit(this.projectForm.value);
   }
 
   onChangeFilter() {

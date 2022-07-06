@@ -1,5 +1,5 @@
 <div class="drawer-find-me">
-  <div class="row m-0">
+  <div class="row m-0 d-md-none">
     <div class="col py-2">
       find me in:
     </div>
@@ -14,6 +14,28 @@
     <div class="col-2 drawer-find-me__social-media"
          (click)="onClickSocialMedia('linkedin')">
       <fa-icon [icon]="faLinkedin"></fa-icon>
+    </div>
+  </div>
+  <div class="row m-0 d-none d-md-block">
+    <div class="drawer-find-me__social-media-desktop">
+      find me in:
+    </div>
+    <div class="drawer-find-me__social-media-desktop"
+         (click)="onClickSocialMedia('facebook')">
+      <fa-icon [icon]="faFacebookF"></fa-icon>
+    </div>
+    <div class="drawer-find-me__social-media-desktop"
+         (click)="onClickSocialMedia('github')">
+      <fa-icon [icon]="faGithub"></fa-icon>
+    </div>
+    <div class="drawer-find-me__social-media-desktop"
+         (click)="onClickSocialMedia('linkedin')">
+      <fa-icon [icon]="faLinkedin"></fa-icon>
+    </div>
+    <div class="drawer-find-me__social-media-desktop-user"
+         (click)="onClickSocialMedia('linkedin')">
+      @GersonCarrascoL
+      <fa-icon [icon]="faGithub"></fa-icon>
     </div>
   </div>
 </div>

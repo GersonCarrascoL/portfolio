@@ -4,3 +4,11 @@ export interface IPortfolioProject {
   githubLink: string;
   tag: string;
 }
+
+export interface IPortfolioFilterProject {
+  android: boolean;
+  angular: boolean;
+  flutter: boolean;
+  nodejs: boolean;
+  php: boolean;
+}

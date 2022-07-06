@@ -1,0 +1,17 @@
+.title-view-container {
+  border: 1px solid #1E2D3D;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid #1E2D3D;
+    padding: 5px 10px;
+  }
+
+  &__icon {
+    font-size: 16px;
+    padding-top: 4px;
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+}

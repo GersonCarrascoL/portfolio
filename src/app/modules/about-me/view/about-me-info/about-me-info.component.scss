@@ -14,3 +14,9 @@
 .info-description {
   color: #607B96;
 }
+
+@media (min-width: 767px) {
+  .info-title {
+    background-color: unset;
+  }
+}

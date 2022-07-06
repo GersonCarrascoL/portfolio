@@ -1,27 +1,69 @@
 <div class="portfolio-container-full portfolio-projects-container">
-  <div class="portfolio-projects-container__title pb-4 px-4">
-    _projects
-  </div>
-
-  <portfolio-accordion [collapsing]="collapsing">
-    <accordion-item title="projects">
-      <ng-template accordionContent>
-        <div class="px-4 py-2">
-          <filter-project (changeFilter)="onChangeFilter($event)"></filter-project>
+  <div class="h-100 d-none d-md-block">
+    <div class="row h-100 m-0">
+      <div class="portfolio-projects-container__sidebar-desktop col-md-3 p-0">
+        <div class="row m-0 h-100">
+          <div class="portfolio-projects-container__icon-list-desktop col-2 p-0 h-100">
+            <portfolio-icon-side-bar></portfolio-icon-side-bar>
+          </div>
+          <div class="col-10 p-0">
+            <portfolio-accordion [collapsing]="collapsing">
+              <accordion-item title="projects">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    <filter-project (changeFilter)="onChangeFilter($event)"></filter-project>
+                  </div>
+                </ng-template>
+              </accordion-item>
+            </portfolio-accordion>
+          </div>
         </div>
-      </ng-template>
-    </accordion-item>
-  </portfolio-accordion>
-
-  <div class="portfolio-projects-container__info px-4">
-    <div class="info-title">
-      <span class="info-directory">// projects </span><span class="info-subdirectory">/ all</span>
+      </div>
+      <div class="col-md-9">
+        <portfolio-title-view [title]="titleProjects"></portfolio-title-view>
+        <div class="row h-100">
+          <div class="col-12 h-100 pt-4">
+            <div class="row">
+              <ng-container *ngFor="let item of projectListFilter">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <project-card [project]="item"></project-card>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile d-block d-md-none">
+    <div class="portfolio-projects-container__title pb-4 px-4">
+      _projects
     </div>
 
-    <div class="list-projects">
-      <ng-container *ngFor="let item of projectsList">
-        <project-card [project]="item"></project-card>
-      </ng-container>
+    <portfolio-accordion [collapsing]="collapsing">
+      <accordion-item title="projects">
+        <ng-template accordionContent>
+          <div class="px-4 py-2">
+            <filter-project (changeFilter)="onChangeFilter($event)"></filter-project>
+          </div>
+        </ng-template>
+      </accordion-item>
+    </portfolio-accordion>
+
+    <div class="portfolio-projects-container__info px-4">
+      <div class="info-title">
+        <span class="info-directory">// projects </span><span class="info-subdirectory">/ all</span>
+      </div>
+
+      <div class="list-projects">
+        <div class="row">
+          <ng-container *ngFor="let item of projectListFilter">
+            <div class="col-12 col-md-6 col-lg-4">
+              <project-card [project]="item"></project-card>
+            </div>
+          </ng-container>
+        </div>
+      </div>
     </div>
   </div>
 </div>

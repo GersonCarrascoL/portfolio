@@ -10,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioDirectoryItemComponent } from './components/portfolio-directory-item/portfolio-directory-item.component';
 import { FindMeInComponent } from './components/find-me-in/find-me-in.component';
 import { PortfolioLinksFindMeComponent } from './components/portfolio-links-find-me/portfolio-links-find-me.component';
+import { IconSidebarComponent } from './components/icon-side-bar/icon-side-bar.component';
+import { TitleViewComponent } from './components/title-view/title-view.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PortfolioLinksFindMeComponent } from './components/portfolio-links-find
     DrawerComponent,
     PortfolioDirectoryItemComponent,
     FindMeInComponent,
-    PortfolioLinksFindMeComponent
+    PortfolioLinksFindMeComponent,
+    IconSidebarComponent,
+    TitleViewComponent
   ],
   imports: [
     MaterialModule,
@@ -39,6 +43,8 @@ import { PortfolioLinksFindMeComponent } from './components/portfolio-links-find
     PortfolioDirectoryItemComponent,
     FindMeInComponent,
     PortfolioLinksFindMeComponent,
+    IconSidebarComponent,
+    TitleViewComponent,
 
     FontAwesomeModule,
     PortfolioAccordionModule

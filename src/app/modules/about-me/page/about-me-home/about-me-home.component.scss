@@ -6,8 +6,16 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     background-color: #010c15;
+  }
+
+  &__sidebar-desktop {
+    border-right: 1px solid #1E2D3D;
+  }
+
+  &__icon-list-desktop {
+    border-right: 1px solid #1E2D3D;
   }
 }
 

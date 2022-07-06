@@ -22,12 +22,21 @@
       font-size: 20px;
       line-height: 24px;
     }
+
   }
 
+  &__gerson-image {
+    margin-top: -40px;
+  }
 
   &__block-code {
     position: absolute;
     bottom: 80px;
+
+    &-desktop {
+      margin-top: 100px;
+    }
+
     &__comment {
       font-size: 14px;
       line-height: 14px;
@@ -56,6 +65,18 @@
       .github-link{
         padding-left: 8px;
         color: #E99287;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio-hello-container {
+    max-width: 768px;
+
+    &__block-name {
+      &__role {
+        color: #4D5BCE;
       }
     }
   }

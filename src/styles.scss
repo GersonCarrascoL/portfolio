@@ -73,3 +73,13 @@ body {
   flex-direction: column;
   max-height: 100%;
 }
+
+.cursor {
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .portfolio-container-full {
+    padding: 52px 0px 20px 0px;
+  }
+}
