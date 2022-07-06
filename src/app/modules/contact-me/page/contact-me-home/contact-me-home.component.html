@@ -6,13 +6,105 @@
           <div class="portfolio-contact-me-container__icon-list-desktop col-2 p-0 h-100">
             <portfolio-icon-side-bar></portfolio-icon-side-bar>
           </div>
-          <div class="col-9">
-            asdasd
+          <div class="col-10 p-0">
+            <portfolio-accordion [collapsing]="collapsing">
+
+              <accordion-item title="contacts">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    A simple and customizable accordion component made with
+                    functionalities provided by angular without having to use any 3rd
+                    party libraries. Ideal when you want custom basic accordion.
+                  </div>
+                </ng-template>
+              </accordion-item>
+
+              <accordion-item title="find-me-also-in">
+                <ng-template accordionContent>
+                  <div class="px-4 py-2">
+                    <ng-container *ngFor="let item of personalLinksFindMe">
+                      <portfolio-links-find-me [text]="item.text"
+                                               [link]="item.link"></portfolio-links-find-me>
+                    </ng-container>
+
+                  </div>
+                </ng-template>
+              </accordion-item>
+            </portfolio-accordion>
           </div>
         </div>
       </div>
       <div class="col-md-9">
-        hola ancho 9
+        <portfolio-title-view [title]="'contacts'"></portfolio-title-view>
+        <div class="row h-100">
+          <div class="col-6 h-100 p-5">
+            <ng-container *ngIf="!messageSend">
+              <contact-me-form [form]="contactForm"
+                               (onSubmit)="onSubmitForm($event)"></contact-me-form>
+            </ng-container>
+            <ng-container *ngIf="messageSend">
+              <contact-me-success (resendNewMessage)="onResendMessage()"></contact-me-success>
+            </ng-container>
+          </div>
+          <div class="col-6 h-100 p-5">
+            <div class="portfolio-contact-me-container__block-code__code mt-4">
+              <p class="attribute-code d-inline-block">const</p>
+              <p class="variable-name d-inline-block pl-2">button</p>
+              <p class="equals d-inline-block pl-2">=</p>
+              <p class="variable-name d-inline-block pl-2">document</p>
+              <p class="sign d-inline-block">.</p>
+              <p class="variable-name d-inline-block">querySekector</p>
+              <p class="sign d-inline-block">(</p>
+              <p class="text-code d-inline-block">'#sendBtn'</p>
+              <p class="sign d-inline-block">);</p>
+            </div>
+            <div class="portfolio-contact-me-container__block-code__code mt-4">
+              <p class="attribute-code d-inline-block">const</p>
+              <p class="variable-name d-inline-block pl-2">message</p>
+              <p class="equals d-inline-block pl-2">=</p>
+              <p class="sign d-inline-block pl-2">{{'{'}}</p>
+              <br>
+              <p class="variable-name d-inline-block pl-3">name</p>
+              <p class="sign d-inline-block">:</p>
+              <p class="text-code d-inline-block pl-2">"{{ form.name }}"</p>
+              <p class="sign d-inline-block">,</p>
+              <br>
+              <p class="variable-name d-inline-block pl-3">email</p>
+              <p class="sign d-inline-block">:</p>
+              <p class="text-code d-inline-block pl-2">"{{ form.email }}"</p>
+              <p class="sign d-inline-block">,</p>
+              <br>
+              <p class="variable-name d-inline-block pl-3">message</p>
+              <p class="sign d-inline-block">:</p>
+              <p class="text-code d-inline-block pl-2">"{{ form.message }}"</p>
+              <p class="sign d-inline-block">,</p>
+              <br>
+              <p class="variable-name d-inline-block pl-3">date</p>
+              <p class="sign d-inline-block">:</p>
+              <p class="text-code d-inline-block pl-2">{{date}}</p>
+              <br>
+              <p class="sign">{{'}'}}</p>
+            </div>
+            <div class="portfolio-contact-me-container__block-code__code mt-4">
+              <p class="variable-name d-inline-block">button</p>
+              <p class="sign d-inline-block">.</p>
+              <p class="variable-name d-inline-block">addEventListener</p>
+              <p class="sign d-inline-block">(</p>
+              <p class="text-code d-inline-block">'click'</p>
+              <p class="sign d-inline-block">, ()</p>
+              <p class="equals d-inline-block pl-2">=></p>
+              <p class="sign d-inline-block pl-2">{{'{'}}</p>
+              <br>
+              <p class="variable-name d-inline-block pl-3">form</p>
+              <p class="sign d-inline-block">.</p>
+              <p class="variable-name d-inline-block">send</p>
+              <p class="sign d-inline-block">(</p>
+              <p class="variable-name d-inline-block">message</p>
+              <p class="sign d-inline-block">);</p>
+              <p class="sign">{{'}'}})</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

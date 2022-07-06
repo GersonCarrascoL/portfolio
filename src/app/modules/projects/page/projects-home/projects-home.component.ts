@@ -11,7 +11,7 @@ export class ProjectsHomeComponent implements OnInit {
   public collapsing = true;
   public projectsList = PortfolioProject;
   public projectListFilter: IPortfolioProject[];
-  public titleProjects: string = 'all';
+  public titleProjects: string = 'Android; Angular; Flutter; Node JS; PHP; ';
   constructor() { }
 
   ngOnInit(): void {
@@ -45,7 +45,7 @@ export class ProjectsHomeComponent implements OnInit {
   }
   private setTItleProjects (project: IPortfolioFilterProject) {
     if(!project.android && !project.angular && !project.flutter && !project.nodejs && ! project.php) {
-      this.titleProjects = 'all';
+      this.titleProjects = '-';
     } else {
       this.titleProjects = '';
       if (project.android) {

@@ -1,6 +1,7 @@
 export interface IPortfolioProject {
   name: string;
   description: string;
+  image: string;
   githubLink: string;
   tag: string;
 }
