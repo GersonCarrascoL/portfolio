@@ -1,4 +1,10 @@
 .project-card{
+  &__title {
+    .name-project {
+      color: #5565E8;
+      font-weight: bold;
+    }
+  }
   &__container {
     width: 100%;
     height: auto;
@@ -13,7 +19,9 @@
     width: 100%;
     border-bottom: 1px solid #1E2D3D;
     position: relative;
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     .tag {
       position: absolute;
       top: 10px;

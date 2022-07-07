@@ -17,4 +17,49 @@
   &__icon-list-desktop {
     border-right: 1px solid #1E2D3D;
   }
+
+  &__block-code {
+    position: absolute;
+    bottom: 80px;
+
+    &-desktop {
+      margin-top: 100px;
+    }
+
+    &__comment {
+      font-size: 14px;
+      line-height: 14px;
+      color: #607B96;
+    }
+
+    &__code {
+      p {
+        margin: 0;
+      }
+
+      .attribute-code {
+        color: #C98BDF;
+      }
+
+      .variable-name {
+        color: #5565E8;
+      }
+
+      .equals{
+        color: #C98BDF;
+      }
+
+      .text-code{
+        color: #FEA55F;
+      }
+
+      .sign {
+        color: #607B96;
+      }
+    }
+  }
+
+  .color-text-contacts {
+    color: #607B96;
+  }
 }

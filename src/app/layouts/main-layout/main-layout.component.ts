@@ -13,7 +13,6 @@ export class MainLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.drawer);
     if(window.innerWidth >= 768) {
       this.mode = 'side';
       this.drawer.close();
@@ -24,7 +23,6 @@ export class MainLayoutComponent implements OnInit {
 
   @HostListener('window:resize', ['$event.target.innerWidth'])
   onResize(width: number) {
-    console.log(width);
     if(width >= 768) {
       this.mode = 'side';
       this.drawer.close();

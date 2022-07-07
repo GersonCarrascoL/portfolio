@@ -5,7 +5,7 @@
     max-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: scroll;
     background-color: #010c15;
     .info-title {
       position: sticky;
@@ -21,6 +21,18 @@
         color: #607B96;
       }
     }
+  }
+
+  .auto-scroll-view{
+    max-height: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .mobile {
+    flex-direction: column;
+    overflow: scroll;
+    max-height: 100%;
   }
 
   &__sidebar-desktop {

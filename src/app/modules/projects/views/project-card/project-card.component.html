@@ -1,5 +1,9 @@
+<div class="project-card__title d-none d-md-block py-2">
+  <span class="name-project">{{project.name}}</span>
+</div>
 <div class="project-card__container">
-  <div class="project-card__image">
+  <div class="project-card__image"
+       style="background-image: url({{project.image}})">
     <div class="tag">
       <ng-container [ngSwitch]="project.tag">
         <ng-container *ngSwitchCase="'angular'">
@@ -21,6 +25,6 @@
     </div>
   </div>
   <div class="project-card__description">
-    aadasd12312asdasd asd asdad asd123123 123
+    {{project.description}}
   </div>
 </div>

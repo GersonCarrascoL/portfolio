@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { faAngular, faAndroid, faPhp, faNode } from '@fortawesome/free-brands-svg-icons';
@@ -30,13 +30,13 @@ export class FilterProjectComponent implements OnInit {
 
   init(){
     this.projectForm = this.fb.group({
-      angular: false,
-      android: false,
-      php: false,
-      nodejs: false,
-      flutter: false
+      angular: true,
+      android: true,
+      php: true,
+      nodejs: true,
+      flutter: true
     })
-    this.changeFilter.emit(this.projectForm.value);
+    // this.changeFilter.emit(this.projectForm.value);
   }
 
   onChangeFilter() {
