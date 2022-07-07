@@ -82,6 +82,13 @@ body {
   max-height: 100%;
 }
 
+.overflow-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden
+}
+
 @media (min-width: 767px) {
   .portfolio-container-full {
     padding: 52px 0px 20px 0px;
