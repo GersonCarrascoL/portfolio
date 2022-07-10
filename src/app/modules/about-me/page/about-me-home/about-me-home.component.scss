@@ -6,7 +6,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: scroll;
     background-color: #010c15;
   }
 
@@ -17,17 +17,11 @@
   &__icon-list-desktop {
     border-right: 1px solid #1E2D3D;
   }
-}
 
-.drawer-find-me {
-  border-top: 1px solid #1E2D3D;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-
-  &__social-media {
-    border-left: 1px solid #1E2D3D;
-    text-align: center;
-    padding: 8px 0 0 0;
+  .mobile {
+    flex-direction: column;
+    overflow: scroll;
+    max-height: 100%;
+    height: 100%;
   }
 }
