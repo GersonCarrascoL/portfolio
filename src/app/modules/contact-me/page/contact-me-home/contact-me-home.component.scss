@@ -59,6 +59,12 @@
     }
   }
 
+  .mobile {
+    flex-direction: column;
+    overflow: scroll;
+    max-height: 100%;
+  }
+
   .color-text-contacts {
     color: #607B96;
   }
