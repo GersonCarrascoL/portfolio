@@ -1,10 +1,5 @@
 .project-card{
-  &__title {
-    .name-project {
-      color: #5565E8;
-      font-weight: bold;
-    }
-  }
+
   &__container {
     width: 100%;
     height: auto;
@@ -31,5 +26,14 @@
 
   &__description {
     padding: 24px;
+
+    .name-project {
+      color: #5565E8;
+      font-weight: bold;
+    }
+
+    .type-project {
+      color: #607B96;
+    }
   }
 }

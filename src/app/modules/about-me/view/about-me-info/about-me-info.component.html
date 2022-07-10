@@ -4,18 +4,52 @@
       <span class="info-directory">// personal-info </span><span class="info-subdirectory">/ bio</span>
     </div>
     <div class="info-description">
-      I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit anim id est laborum.
+      Graduated from the Software Engineering degree at the Universidad Nacional Mayor de San Marcos with analysis skills, teamwork, enthusiastic and self-taught in new technologies and good practices, flexible to change and proactive in the development of activities that impact results in the organization. I have 4 years of experience in the development of software projects oriented to REST services, mobile and web applications.
     </div>
   </ng-container>
 
-  <ng-container *ngSwitchCase="'interests'">
+  <ng-container *ngSwitchCase="'experience'">
     <div class="info-title">
-      <span class="info-directory">// personal-info </span><span class="info-subdirectory">/ interests</span>
+      <span class="info-directory">// personal-info </span><span class="info-subdirectory">/ experience</span>
     </div>
     <div class="info-description">
-      My Interests
+      <ng-container *ngFor="let experience of personalExperience">
+        <div class="education-info pb-3">
+          <div class="row">
+            <div class="col-12 experience-enterprise">
+              <mat-icon>work</mat-icon> <span class="ml-2">{{experience.enterprise}}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 experience-place">
+              <div class="ml-5">
+                <span>{{experience.role}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 experience-time">
+              <div class="ml-5">
+                <span>{{experience.startDate}}</span> - <span>{{experience.endDate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="ml-5">
+                <div class="function-title">
+                  Funciones:
+                </div>
+                <ul>
+                  <ng-container *ngFor="let function of experience.functions">
+                    <li>{{function}}</li>
+                  </ng-container>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
     </div>
   </ng-container>
 
@@ -24,7 +58,29 @@
       <span class="info-directory">// personal-info </span><span class="info-subdirectory">/ education</span>
     </div>
     <div class="info-description">
-      My education
+      <ng-container *ngFor="let education of personalEducation">
+        <div class="education-info pb-3">
+          <div class="row">
+            <div class="col-12 education-title">
+              <mat-icon>school</mat-icon> <span class="ml-2">{{education.title}}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 education-time">
+              <div class="ml-5">
+                <span>{{education.startDate}}</span> - <span>{{education.endDate}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 education-place">
+              <div class="ml-5">
+                <span>{{education.place}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
     </div>
   </ng-container>
 </ng-container>

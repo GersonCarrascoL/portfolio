@@ -7,7 +7,7 @@ export const PortfolioDirectoryItemsPersonalInfo: IPortfolioDirectoryItem[] = [
     color: 'red'
   },
   {
-    text: 'interests',
+    text: 'experience',
     icon: 'folder',
     color: 'green'
   },

@@ -1,8 +1,10 @@
 .info-title {
   position: sticky;
-  top: 0;
-  background-color: #010C15;
-  padding: 10px 0 10px 0;
+  top: 0px;
+  width: 100%;
+  background-color: #010c15;
+  z-index: 2;
+  padding: 20px 0 20px 0;
   .info-directory {
     color: #FFFFFF;
   }
@@ -13,6 +15,20 @@
 
 .info-description {
   color: #607B96;
+
+  .experience-enterprise {
+    display: flex;
+    align-items: center;
+  }
+
+  .function-title {
+    text-decoration: underline;
+  }
+
+  .education-title {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (min-width: 767px) {
