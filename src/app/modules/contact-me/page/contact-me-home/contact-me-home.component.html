@@ -174,7 +174,8 @@
     <div class="portfolio-contact-me-container__info px-4">
       <ng-container *ngIf="!messageSend">
         <contact-me-form [form]="contactForm"
-                         (onSubmit)="onSubmitForm($event)"></contact-me-form>
+                         (onSubmit)="onSubmitForm($event)"
+                         [isLoading]="(isLoading$ | async)!"></contact-me-form>
       </ng-container>
       <ng-container *ngIf="messageSend">
         <contact-me-success (resendNewMessage)="onResendMessage()"></contact-me-success>

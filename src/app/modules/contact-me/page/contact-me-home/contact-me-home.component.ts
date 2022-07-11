@@ -4,6 +4,9 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 import { PortfolioLinksFindMe } from '@shared/constants/portfolio-links-find-me.const';
 import { IPortfolioContactMeForm } from '@shared/interfaces/portfolio-contact-me-form.interface';
 
+import { ContactService } from '@shared/services/contact.service';
+import { Subject } from 'rxjs';
+
 @Component({
   selector: 'portfolio-contact-me-home',
   templateUrl: './contact-me-home.component.html',
@@ -14,36 +17,52 @@ export class ContactMeHomeComponent implements OnInit {
   contactForm : FormGroup;
   public collapsing = true;
   public personalLinksFindMe = PortfolioLinksFindMe;
+  public isLoading$: Subject<boolean>;
   public messageSend = false;
   public now = new Date();
   public date: string | null;
   constructor(
     private fb: FormBuilder,
-    private datePipe: DatePipe
-  ) { }
+    private datePipe: DatePipe,
+    private contactService: ContactService
+  ) {
+    this.isLoading$ = new Subject();
+  }
 
   ngOnInit(): void {
-    this.init();
+    this.initForm();
     this.date = this.datePipe.transform(this.now, 'dd/MM/yyyy');
   }
 
-  private init() {
+  private initForm() {
     this.contactForm = this.fb.group({
-      name: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      message: new FormControl('', [Validators.required]),
+      name: new FormControl('', [Validators.required, Validators.maxLength(100)]),
+      email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(100)]),
+      message: new FormControl('', [Validators.required, Validators.maxLength(200)]),
+      date: null
     })
   }
 
   get form() {
     return this.contactForm.value;
   }
-  onSubmitForm(form: IPortfolioContactMeForm) {
-    this.messageSend = true;
+
+  async onSubmitForm(form: IPortfolioContactMeForm) {
+    this.isLoading$.next(true);
+    try {
+      const response = await this.contactService.addContactForm(form);
+    } catch (error) {
+
+    } finally {
+      this.messageSend = true;
+      this.isLoading$.next(false);
+    }
   }
 
   onResendMessage() {
     this.contactForm.reset();
+    this.initForm();
+    console.log(this.contactForm.value)
     this.messageSend = false;
   }
 }

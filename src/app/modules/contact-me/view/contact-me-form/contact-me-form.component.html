@@ -1,17 +1,20 @@
 <div class="mt-4">
-  <form [formGroup]="form">
+  <form [formGroup]="form"
+        *ngIf="form">
     <mat-form-field appearance="outline"
                     class="w-100 mt-2">
       <mat-label>_name</mat-label>
       <input matInput
-             formControlName="name">
+             formControlName="name"
+             maxlength="100">
       <mat-error *ngIf="contactMeForm['name'].hasError('required')">The name is required</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline"
                     class="w-100 mt-2">
       <mat-label>_email</mat-label>
       <input matInput
-             formControlName="email">
+             formControlName="email"
+             maxlength="100">
       <mat-error *ngIf="contactMeForm['email'].hasError('required')">The email is required</mat-error>
       <mat-error *ngIf="contactMeForm['email'].hasError('email')">The email is mal formated</mat-error>
     </mat-form-field>
@@ -21,14 +24,25 @@
       <textarea matInput
                 formControlName="message"
                 rows="3"
-                cols="40"></textarea>
+                cols="40"
+                maxlength="200"></textarea>
       <mat-error *ngIf="contactMeForm['message'].hasError('required')">The message is required</mat-error>
+      <mat-hint align="end">{{contactMeForm['message'].value.length}} / 200</mat-hint>
     </mat-form-field>
 
     <button mat-raised-button
-            [disabled]="form.invalid"
+            [disabled]="form.invalid || isLoading"
             color="primary"
             class="mt-2"
-            (click)="onContactMe()">submit-message</button>
+            (click)="onContactMe()">
+      submit-message
+      <ng-container *ngIf="isLoading">
+        <mat-icon>
+          <mat-spinner diameter="20">
+          </mat-spinner>
+        </mat-icon>
+      </ng-container>
+
+    </button>
   </form>
 </div>
