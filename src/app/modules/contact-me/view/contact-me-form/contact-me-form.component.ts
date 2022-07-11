@@ -10,6 +10,7 @@ import { IPortfolioContactMeForm } from '@shared/interfaces/portfolio-contact-me
 })
 export class ContactMeFormComponent implements OnInit {
   @Input() form: FormGroup;
+  @Input() public isLoading: boolean;
 
   @Output() onSubmit: EventEmitter<IPortfolioContactMeForm>;
   constructor() {
