@@ -51,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "np rum build"
+      "pre-push": "npm rum build"
     }
   }
 }
