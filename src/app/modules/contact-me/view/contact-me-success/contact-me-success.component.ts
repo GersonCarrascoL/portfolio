@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'contact-me-success',
@@ -7,6 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ContactMeSuccessComponent implements OnInit {
   @Output() resendNewMessage: EventEmitter<void>;
+  @Input() isSuccess: boolean;
   constructor() {
     this.resendNewMessage = new EventEmitter();
   }

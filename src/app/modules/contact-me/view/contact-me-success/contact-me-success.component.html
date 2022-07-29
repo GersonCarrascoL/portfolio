@@ -1,9 +1,19 @@
 <div class="text-center">
   <div class="title-success mt-4">
-    Thank you! 🤟🏼
+    <ng-container *ngIf="isSuccess">
+      Thank you! 🤟🏼
+    </ng-container>
+    <ng-container *ngIf="!isSuccess">
+      Ups, something went wrong! 🤦🏻‍♂️
+    </ng-container>
   </div>
   <div class="message-success mt-3">
-    Your message has been accepted. You will receive answer really soon!
+    <ng-container *ngIf="isSuccess">
+      Your message has been accepted. You will receive answer really soon!
+    </ng-container>
+    <ng-container *ngIf="!isSuccess">
+      Try again!
+    </ng-container>
   </div>
   <button mat-raised-button
           color="primary"

@@ -4,11 +4,13 @@ import { AboutMeRoutingModule } from './about-me.routing';
 import { SharedModule } from '@shared/shared.module';
 import { AboutMeHomeComponent } from './page/about-me-home/about-me-home.component';
 import { AboutMeInfoComponent } from './view/about-me-info/about-me-info.component';
+import { AboutMeSnippetsComponent } from './view/about-me-snippet/about-me-snippets.component';
 
 @NgModule({
   declarations: [
     AboutMeHomeComponent,
-    AboutMeInfoComponent
+    AboutMeInfoComponent,
+    AboutMeSnippetsComponent
   ],
   imports: [
     CommonModule,
@@ -19,4 +21,4 @@ import { AboutMeInfoComponent } from './view/about-me-info/about-me-info.compone
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AboutMeModule {}
+export class AboutMeModule { }
