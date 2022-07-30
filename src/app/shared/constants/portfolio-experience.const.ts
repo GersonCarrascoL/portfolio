@@ -2,39 +2,39 @@ import { IPortfolioExperience } from "@shared/interfaces/portfolio-experience.in
 
 export const PortfolioLExperience: IPortfolioExperience[] = [
   {
-    startDate: 'Setiembre 2021',
-    endDate: 'Actualidad',
+    startDate: 'September 2021',
+    endDate: 'Present',
     role: 'Solution Analyst',
     enterprise: 'NTT Data',
     functions: [
-      'Análisis y Desarrollo y soluciones Frontend con microfrontends.',
-      'Creación de web components.',
-      'Soporte incidencias web.'
+      'Analysis, Development and Frontend solutions with microfrontends.',
+      'Creation of web components.',
+      'Support web incidents.'
     ]
   },
   {
-    startDate: 'Agosto 2019',
-    endDate: 'Setiembre 2021',
-    role: 'Desarrollador Frontend',
+    startDate: 'August 2019',
+    endDate: 'September 2021',
+    role: 'Frontend Developer',
     enterprise: 'G&S Gestión y Sistemas SAC',
     functions: [
-      'Desarrollo de proyectos Frontend.',
-      'Desarrollo de aplicaciones mobile con reconocimiento de voz.',
-      'Análisis de requerimientos de nuevos proyectos.',
-      'Estimaciones de nuevos proyectos y requerimientos web.'
+      'Development of Frontend projects.',
+      'Development of mobile applications with voice recognition.',
+      'Analysis of requirements of new projects.',
+      'Estimates of new projects and web requirements.'
     ]
   },
   {
-    startDate: 'Agosto 2017',
-    endDate: 'Julio 2019',
-    role: 'Desarrollador Backend',
+    startDate: 'August 2017',
+    endDate: 'July 2019',
+    role: 'Backend Developer',
     enterprise: 'HEEDCOM',
     functions: [
-      'Desarrollo de Web Service con PHP(Lumen) y NodeJS.',
-      'Desarrollo de paginas web en PHP y Laravel.',
-      'Despliegue y configuración de paginas web en Hosting web.',
-      'Configuración y mantenimiento de servidor de prueba ( CentOS 7).',
-      'Manejo de Servidores Web: Apache, Nginx.'
+      'Web Service development with PHP(Lumen) and NodeJS.',
+      'Development of web pages in PHP and Laravel.',
+      'Development of web pages in PHP and Laravel.',
+      'Configuration and maintenance of test server (CentOS 7).',
+      'Management of Web Servers: Apache, Nginx.'
     ]
   }
 ]

@@ -14,12 +14,13 @@ import { Subject } from 'rxjs';
   providers: [DatePipe]
 })
 export class ContactMeHomeComponent implements OnInit {
-  contactForm : FormGroup;
-  public collapsing = true;
+  contactForm: FormGroup;
+  public collapsing: boolean = true;
   public personalLinksFindMe = PortfolioLinksFindMe;
   public isLoading$: Subject<boolean>;
-  public messageSend = false;
-  public now = new Date();
+  public messageSend: boolean = false;
+  public isSuccess: boolean = false;
+  public now: Date = new Date();
   public date: string | null;
   constructor(
     private fb: FormBuilder,
@@ -50,9 +51,10 @@ export class ContactMeHomeComponent implements OnInit {
   async onSubmitForm(form: IPortfolioContactMeForm) {
     this.isLoading$.next(true);
     try {
-      const response = await this.contactService.addContactForm(form);
+      await this.contactService.addContactForm(form);
+      this.isSuccess = true;
     } catch (error) {
-
+      this.isSuccess = false;
     } finally {
       this.messageSend = true;
       this.isLoading$.next(false);
@@ -62,7 +64,7 @@ export class ContactMeHomeComponent implements OnInit {
   onResendMessage() {
     this.contactForm.reset();
     this.initForm();
-    console.log(this.contactForm.value)
     this.messageSend = false;
+    this.isSuccess = false;
   }
 }

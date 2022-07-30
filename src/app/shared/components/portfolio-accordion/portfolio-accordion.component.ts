@@ -10,8 +10,8 @@ import { PortfolioAccordionItem } from "./directives/portfolio-accordion-item.di
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('contentExpansion', [
-      state('expanded', style({height: '*', opacity: 1, visibility: 'visible'})),
-      state('collapsed', style({height: '0px', opacity: 0, visibility: 'hidden'})),
+      state('expanded', style({ height: '*', opacity: 1, visibility: 'visible' })),
+      state('collapsed', style({ height: '0px', opacity: 0, visibility: 'hidden' })),
       transition('expanded <=> collapsed',
         animate('200ms cubic-bezier(.37,1.04,.68,.98)')),
     ])
@@ -22,6 +22,13 @@ export class PortfolioAccordionComponent {
   @Input() collapsing = true;
   @ContentChildren(PortfolioAccordionItem) items: QueryList<PortfolioAccordionItem>;
 
+  ngAfterContentInit() {
+    if (this.collapsing) {
+      this.items.forEach((_, index) => {
+        this.toggleState(index);
+      })
+    }
+  }
   getToggleState = memoize((index: number) => {
     return this.toggleState.bind(this, index);
   })

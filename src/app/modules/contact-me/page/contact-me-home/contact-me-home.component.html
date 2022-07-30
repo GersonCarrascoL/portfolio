@@ -178,7 +178,8 @@
                          [isLoading]="(isLoading$ | async)!"></contact-me-form>
       </ng-container>
       <ng-container *ngIf="messageSend">
-        <contact-me-success (resendNewMessage)="onResendMessage()"></contact-me-success>
+        <contact-me-success [isSuccess]="isSuccess"
+                            (resendNewMessage)="onResendMessage()"></contact-me-success>
       </ng-container>
     </div>
   </div>
