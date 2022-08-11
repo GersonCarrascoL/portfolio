@@ -7,12 +7,14 @@
   background-color: #011627;
 
   &__social-media {
+    cursor: pointer;
     border-left: 1px solid #1E2D3D;
     text-align: center;
     padding: 8px 0 0 0;
   }
 
   &__social-media-desktop {
+    cursor: pointer;
     display: inline-block;
     border-left: 1px solid #1E2D3D;
     padding: 9px 16px 9px 16px;
