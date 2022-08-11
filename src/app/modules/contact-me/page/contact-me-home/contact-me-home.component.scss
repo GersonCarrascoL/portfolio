@@ -6,7 +6,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     background-color: #011627;
   }
 
@@ -61,7 +61,7 @@
 
   .mobile {
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     max-height: 100%;
   }
 
